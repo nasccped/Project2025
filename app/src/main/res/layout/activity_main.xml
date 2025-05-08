@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navbar">
+
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:checkedButton="@id/nav_new_contact"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/nav_new_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_style"
+            android:button="@null"
+            android:drawableTop="@drawable/add_person_image"
+            android:drawablePadding="5dp"
+            android:drawableTint="#8668BD"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="adicionar" />
+
+        <RadioButton
+            android:id="@+id/nav_drop_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_style"
+            android:button="@null"
+            android:drawableTop="@drawable/remove_person_image"
+            android:drawablePadding="5dp"
+            android:drawableTint="#8668BD"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp"
+            android:text="remover" />
+
+        <RadioButton
+            android:id="@+id/nav_show_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_style"
+            android:button="@null"
+            android:drawableTop="@drawable/magnifying_glass_image"
+            android:drawablePadding="5dp"
+            android:drawableTint="#8668BD"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp"
+            android:text="consultar" />
+
+        <RadioButton
+            android:id="@+id/nav_authors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/radio_button_style"
+            android:button="@null"
+            android:drawableTop="@drawable/computer_image"
+            android:drawablePadding="5dp"
+            android:drawableTint="#8668BD"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="10dp"
+            android:text="autores" />
+    </RadioGroup>
+
+</RelativeLayout>
